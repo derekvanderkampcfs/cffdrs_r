@@ -221,6 +221,7 @@ fwi <- function(
     batch = TRUE,
     out = "all",
     lat.adjust = TRUE,
+    rk_multiplier = 1,
     uppercase = TRUE) {
   #############################################################################
   # Description: Canadian Forest Fire Weather Index Calculations. All code
@@ -420,7 +421,7 @@ fwi <- function(
     ###########################################################################
     dmc1 <- duff_moisture_code(
       dmc_yda, temp[k], rh[k], prec[k], lat[k], mon[k],
-      lat.adjust
+      lat.adjust,rk_multiplier
     )
 
     ###########################################################################
